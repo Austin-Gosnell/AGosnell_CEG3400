@@ -5,30 +5,30 @@
 ### Task 1: Hashing
 
 **Reminder Deliverable:** Is your `salted-data.csv` in this repository?
--yes
+  *yes
 Answer the following in this file:
 
 * How many unique users are in the data?
-* 37 unique users
+  * 37 unique users
 * How many salts did you create?
-* 37 unique salts
+  * 37 unique salts
 * How many possible combinations will I need to try to figure out the secret ID
   of all students (assume I know all potential secret IDs and have your 
   `salted-data.csv`)
-* 1369 possible combinations
+  * 1369 possible combinations
 * Instead of salts, if you were to use a nonce (unique number for each hashed
   field) how many possible combinations would I need to try?
-* since each nonce is only used once and changes each time, nearly infinite
+  * since each nonce is only used once and changes each time, nearly infinite
 * Given the above, if this quiz data were *actual* class data, say for example
   your final exam, how would you store this dataset?  Why?
-* using nonces and not storing each step in a seperate .txt file
+  * using nonces and not storing each step in a seperate .txt file
 
 ```
 for i in {1..37}; do shuf -i 00000-99999 -n 1; done > salts.txt
 while IFS= read -r line; do printf "$line" | sha256sum; done < first_salt.txt
 ```
-* asked google AI "bash to generate 37 random 5 digit numbers". Answer was the first code line above.
-* asked google AI "how to sha256sum individual lines in a .txt file". Answer was the second line of code above
+  # asked google AI "bash to generate 37 random 5 digit numbers". Answer was the first code line above.
+  # asked google AI "how to sha256sum individual lines in a .txt file". Answer was the second line of code above
 ---
 
 ### Task 2: Crypto Mining
