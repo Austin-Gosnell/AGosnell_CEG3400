@@ -27,8 +27,8 @@ Answer the following in this file:
 for i in {1..37}; do shuf -i 00000-99999 -n 1; done > salts.txt
 while IFS= read -r line; do printf "$line" | sha256sum; done < first_salt.txt
 ```
-   (asked google AI "bash to generate 37 random 5 digit numbers". Answer was the first code line above.)
-   (asked google AI "how to sha256sum individual lines in a .txt file". Answer was the second line of code above)
+   *(asked google AI "bash to generate 37 random 5 digit numbers". Answer was the first code line above.)
+   *(asked google AI "how to sha256sum individual lines in a .txt file". Answer was the second line of code above)
 ---
 
 ### Task 2: Crypto Mining
