@@ -14,11 +14,10 @@ for i in {1..194000}; do shuf -i 0000000000-9999999999 -n 1; done > nonces.txt
 paste -d '' nonces.txt dictionary.txt > pre-hash.txt
 #combines nonces with dictionary to get 194,000 combinations
 
-while IFS= read -r line; do echo -n "$line" | sha256sum; done < pre-hash.txt >
-post-hash.txt
+while IFS= read -r line; do echo -n "$line" | sha256sum; done < pre-hash.txt > post-hash.txt
 #takes pre-hash, hashes each line and puts it as its own line in post-hash.txt
 
-paste -d '  -   ' pre-hash.txt post-hash.txt > combinations.txt
+paste -d '  ' pre-hash.txt post-hash.txt > combinations.txt
 #combines the lists so you know what gave which hash
 
 cat combinations.txt | grep " 0000"

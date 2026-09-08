@@ -45,6 +45,8 @@ hash)
 7094401755christmasy 000095859b10351101941dfa7bf81234e7f9e76f827d6694bb73a93196e8de24
 9581592190scopate 0000032932491897e13d3d7a93c6573ab2dd30a97bef841664868cf38ac3778f
 858542209scribbling 0000457c781a857b1460cf58e7ccf653c14a0176b3be2e57f49e10f9f1d30d32
+5999395093baronage 000028f06f19409c06d4a530ee2050ed9ce55c55cbf8bd3c85fb3f6ac5d4e829
+9863610226xenodochium 000007fd26ed4a02f1be340d6b29e76e7a31867c13584e4a583e060c5b675af3
 ```
 
 * How many words were in your dictionary?
@@ -61,7 +63,7 @@ hash)
     *I'm sure there are techniques for getting nonces or words that tend to convert to hashes with more zeros
 
 ```bash
-please put any cool bash one-liners or other piped commands you
-learned/struggled with for task 2 here
+paste -d '' nonces.txt dictionary.txt > pre-hash.txt
 ```
-
+    *(asked google AI "how to take one line from a .txt and combine it with the same line number of another .txt". Answer was the above command)
+    *http://www.gwicks.net/dictionaries.htm for the dictionary I used
