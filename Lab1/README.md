@@ -42,16 +42,23 @@ Answer the following:
 hash)
 
 ```
-
+7094401755christmasy 000095859b10351101941dfa7bf81234e7f9e76f827d6694bb73a93196e8de24
+9581592190scopate 0000032932491897e13d3d7a93c6573ab2dd30a97bef841664868cf38ac3778f
+858542209scribbling 0000457c781a857b1460cf58e7ccf653c14a0176b3be2e57f49e10f9f1d30d32
 ```
 
 * How many words were in your dictionary?
+    *194,000
 * How many nonces did your code iterate over?
+    *194,000
 * What was the maximum number of hashes your code *could* compute given the above?
+    *I only set it up to do 194,000 combinations, but that's 194,000 every time the command is ran, so theoretically infinite
 * What did you think about Task 2?
+    *I thought it was a lot of fun trying to figure out how to combine lists and mine with as few steps as I could
 * Is there a better way than brute force to attempt to get higher valued coins?
+    *I'm sure that there is, I just don't know enough yet to think of it
 * Why or why not?
-
+    *I'm sure there are techniques for getting nonces or words that tend to convert to hashes with more zeros
 
 ```bash
 please put any cool bash one-liners or other piped commands you
