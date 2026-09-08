@@ -64,6 +64,8 @@ hash)
 
 ```bash
 paste -d '' nonces.txt dictionary.txt > pre-hash.txt
+[ -f "dictionary.txt"] || wget http://www.gwicks.net/textlists/english3.zip
 ```
     *(asked google AI "how to take one line from a .txt and combine it with the same line number of another .txt". Answer was the above command)
+    *(asked google AI "how to run wget only if a file is not found". Answer is the second command above
     *http://www.gwicks.net/dictionaries.htm for the dictionary I used

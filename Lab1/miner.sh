@@ -3,9 +3,10 @@
 
 echo "Starting this script"
 
-wget http://www.gwicks.net/textlists/english3.zip
+[ -f "dictionary.txt"] || wget http://www.gwicks.net/textlists/english3.zip
 unzip english3.zip
 mv english3.txt dictionary.txt
+rm english3.zip
 #gets the dictionary and renames it
 
 for i in {1..194000}; do shuf -i 0000000000-9999999999 -n 1; done > nonces.txt
